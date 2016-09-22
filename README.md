@@ -13,8 +13,7 @@ Milestone Submission - Due: Monday, September 26 @ 11:55 PM
 4 pts: Doesn’t crash / looks reasonable
 
 
-
-Tasks for Patrick (to be partially delegated to Torry when he is up to date):
+# Tasks for Patrick (to be partially delegated to Torry when he is up to date):
 
 
 Create the list UI in Main.storyboard
@@ -28,7 +27,7 @@ Connect the UI to ViewController.swift
 Program the swiping attributes in the table cell class that should have been created when adding the table cell to the UI
 
 
-Tasks for Torry:
+# Tasks for Torry:
 
 Find a way to use Xcode, either on your computer or in the lab.
 
