@@ -43,7 +43,7 @@ At the end: Test the app on the iPod while reviewing the rubric to ensure everyt
 
 
 
-Resources used:
+# Resources used:
 
 https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson7.html#//apple_ref/doc/uid/TP40015214-CH8-SW1
 
