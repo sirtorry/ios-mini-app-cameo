@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDA3BF771D8C397300E7FD3B"
-               BuildableName = "LectureTest2.app"
-               BlueprintName = "LectureTest2"
-               ReferencedContainer = "container:LectureTest2.xcodeproj">
+               BlueprintIdentifier = "CD9F36E61D8E102300A704C7"
+               BuildableName = "BucketList.app"
+               BlueprintName = "BucketList"
+               ReferencedContainer = "container:BucketList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDA3BF771D8C397300E7FD3B"
-            BuildableName = "LectureTest2.app"
-            BlueprintName = "LectureTest2"
-            ReferencedContainer = "container:LectureTest2.xcodeproj">
+            BlueprintIdentifier = "CD9F36E61D8E102300A704C7"
+            BuildableName = "BucketList.app"
+            BlueprintName = "BucketList"
+            ReferencedContainer = "container:BucketList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDA3BF771D8C397300E7FD3B"
-            BuildableName = "LectureTest2.app"
-            BlueprintName = "LectureTest2"
-            ReferencedContainer = "container:LectureTest2.xcodeproj">
+            BlueprintIdentifier = "CD9F36E61D8E102300A704C7"
+            BuildableName = "BucketList.app"
+            BlueprintName = "BucketList"
+            ReferencedContainer = "container:BucketList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDA3BF771D8C397300E7FD3B"
-            BuildableName = "LectureTest2.app"
-            BlueprintName = "LectureTest2"
-            ReferencedContainer = "container:LectureTest2.xcodeproj">
+            BlueprintIdentifier = "CD9F36E61D8E102300A704C7"
+            BuildableName = "BucketList.app"
+            BlueprintName = "BucketList"
+            ReferencedContainer = "container:BucketList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,14 +7,14 @@
     "3E89B1D52CACD99990B19EC699E437B9F255AC94" : 9223372036854775807,
     "4C9456B4622CC201E2A71D1994B760EBF9E69574" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "775F1DF5-6A32-451E-8987-576DE7E49457",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10E798CC-6DF4-4E1B-9CCE-3AC706BFECEE",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "3E89B1D52CACD99990B19EC699E437B9F255AC94" : "cameo\/",
     "4C9456B4622CC201E2A71D1994B760EBF9E69574" : ""
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "LectureTest2",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BucketList",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LectureTest2\/LectureTest2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BucketList\/BucketList.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/UVaCS4720\/ios-mini-app-cameo.git",

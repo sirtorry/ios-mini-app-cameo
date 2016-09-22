@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LectureTest2
+//  BucketList
 //
-//  Created by Patrick Anderson on 9/16/16.
+//  Created by Patrick Anderson on 9/17/16.
 //  Copyright © 2016 Cameo. All rights reserved.
 //
 
