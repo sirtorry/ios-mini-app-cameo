@@ -48,3 +48,5 @@ At the end: Test the app on the iPod while reviewing the rubric to ensure everyt
 https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson7.html#//apple_ref/doc/uid/TP40015214-CH8-SW1
 
 https://www.lynda.com/Swift-tutorials/iOS-8-App-Development-Swift-1-Essential-Training/185036-2.html
+
+https://www.raywenderlich.com/77974/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-1
