@@ -13,6 +13,9 @@
 		CD54CA061D98ADE300237918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD54CA051D98ADE300237918 /* Assets.xcassets */; };
 		CD54CA091D98ADE300237918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD54CA071D98ADE300237918 /* LaunchScreen.storyboard */; };
 		CD54CA111D98B47700237918 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54CA101D98B47700237918 /* InfoViewController.swift */; };
+		CDD1864B1D99D08300D2B80F /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1864A1D99D08300D2B80F /* ListItem.swift */; };
+		CDD1864F1D99D82A00D2B80F /* StrikeThroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1864E1D99D82A00D2B80F /* StrikeThroughText.swift */; };
+		CDD186511D99DB6A00D2B80F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD186501D99DB6A00D2B80F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CD54CA081D98ADE300237918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD54CA0A1D98ADE300237918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD54CA101D98B47700237918 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CDD1864A1D99D08300D2B80F /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		CDD1864E1D99D82A00D2B80F /* StrikeThroughText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrikeThroughText.swift; sourceTree = "<group>"; };
+		CDD186501D99DB6A00D2B80F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 			children = (
 				CD54C9FE1D98ADE300237918 /* AppDelegate.swift */,
 				CD54CA001D98ADE300237918 /* ViewController.swift */,
+				CDD1864E1D99D82A00D2B80F /* StrikeThroughText.swift */,
+				CDD186501D99DB6A00D2B80F /* TableViewCell.swift */,
 				CD54CA021D98ADE300237918 /* Main.storyboard */,
 				CD54CA101D98B47700237918 /* InfoViewController.swift */,
+				CDD1864A1D99D08300D2B80F /* ListItem.swift */,
 				CD54CA051D98ADE300237918 /* Assets.xcassets */,
 				CD54CA071D98ADE300237918 /* LaunchScreen.storyboard */,
 				CD54CA0A1D98ADE300237918 /* Info.plist */,
@@ -140,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD1864F1D99D82A00D2B80F /* StrikeThroughText.swift in Sources */,
+				CDD1864B1D99D08300D2B80F /* ListItem.swift in Sources */,
 				CD54CA011D98ADE300237918 /* ViewController.swift in Sources */,
+				CDD186511D99DB6A00D2B80F /* TableViewCell.swift in Sources */,
 				CD54CA111D98B47700237918 /* InfoViewController.swift in Sources */,
 				CD54C9FF1D98ADE300237918 /* AppDelegate.swift in Sources */,
 			);
@@ -306,6 +318,7 @@
 				CD54CA0F1D98ADE300237918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

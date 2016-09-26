@@ -1,9 +1,9 @@
 //
 //  TableViewCell.swift
-//  ClearStyle
+//  Bucket
 //
-//  Created by Audrey M Tam on 29/07/2014.
-//  Copyright (c) 2014 Ray Wenderlich. All rights reserved.
+//  Created by Patrick Anderson on 9/26/16.
+//  Copyright © 2016 Cameo. All rights reserved.
 //
 
 import UIKit
@@ -12,11 +12,11 @@ import QuartzCore
 // A protocol that the TableViewCell uses to inform its delegate of state change
 protocol TableViewCellDelegate {
     // indicates that the given item has been deleted
-    func toDoItemDeleted(_ todoItem: ToDoItem)
+    func toDoItemDeleted(_ todoItem: ListItem)
 }
 
 class TableViewCell: UITableViewCell {
-    
+
     let gradientLayer = CAGradientLayer()
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false, completeOnDragRelease = false
@@ -26,7 +26,7 @@ class TableViewCell: UITableViewCell {
     // The object that acts as delegate for this cell.
     var delegate: TableViewCellDelegate?
     // The item that this cell renders.
-    var toDoItem: ToDoItem? {
+    var toDoItem: ListItem? {
         didSet {
             label.text = toDoItem!.text
             label.strikeThrough = toDoItem!.completed
@@ -43,7 +43,7 @@ class TableViewCell: UITableViewCell {
         label = StrikeThroughText(frame: CGRect.null)
         //label.textColor = UIColor.white
         //label.font = UIFont.boldSystemFont(ofSize: 16)
-        //label.backgroundColor = UIColor.clear
+        label.backgroundColor = UIColor.clear
         
         // utility method for creating the contextual cues
         func createCueLabel() -> UILabel {
@@ -100,11 +100,11 @@ class TableViewCell: UITableViewCell {
         gradientLayer.frame = bounds
         itemCompleteLayer.frame = bounds
         label.frame = CGRect(x: kLabelLeftMargin, y: 0,
-            width: bounds.size.width - kLabelLeftMargin, height: bounds.size.height)
+                             width: bounds.size.width - kLabelLeftMargin, height: bounds.size.height)
         tickLabel.frame = CGRect(x: -kUICuesWidth - kUICuesMargin, y: 0,
-            width: kUICuesWidth, height: bounds.size.height)
+                                 width: kUICuesWidth, height: bounds.size.height)
         crossLabel.frame = CGRect(x: bounds.size.width + kUICuesMargin, y: 0,
-            width: kUICuesWidth, height: bounds.size.height)
+                                  width: kUICuesWidth, height: bounds.size.height)
     }
     
     //MARK: - horizontal pan gesture methods
@@ -132,11 +132,15 @@ class TableViewCell: UITableViewCell {
         // 3
         if recognizer.state == .ended {
             let originalFrame = CGRect(x: 0, y: frame.origin.y,
-                width: bounds.size.width, height: bounds.size.height)
+                                       width: bounds.size.width, height: bounds.size.height)
             if deleteOnDragRelease {
                 if delegate != nil && toDoItem != nil {
-                    // notify the delegate that this item should be deleted
-                    delegate!.toDoItemDeleted(toDoItem!)
+                    if toDoItem != nil {
+                        toDoItem!.completed = false
+                    }
+                    label.strikeThrough = false
+                    itemCompleteLayer.isHidden = true
+                    UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
                 }
             } else if completeOnDragRelease {
                 if toDoItem != nil {
@@ -161,4 +165,6 @@ class TableViewCell: UITableViewCell {
         }
         return false
     }
+
+
 }

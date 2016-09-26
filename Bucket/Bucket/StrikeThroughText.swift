@@ -1,16 +1,16 @@
 //
 //  StrikeThroughText.swift
-//  ClearStyle
+//  Bucket
 //
-//  Created by Audrey M Tam on 29/07/2014.
-//  Copyright (c) 2014 Ray Wenderlich. All rights reserved.
+//  Created by Patrick Anderson on 9/26/16.
+//  Copyright © 2016 Cameo. All rights reserved.
 //
 
 import UIKit
 import QuartzCore
 
-// A UILabel subclass that can optionally have a strikethrough.
 class StrikeThroughText: UILabel {
+    
     let strikeThroughLayer: CALayer
     // A Boolean value that determines whether the label should have a strikethrough.
     var strikeThrough : Bool {
@@ -28,7 +28,7 @@ class StrikeThroughText: UILabel {
     
     override init(frame: CGRect) {
         strikeThroughLayer = CALayer()
-//        strikeThroughLayer.backgroundColor = UIColor.white.cgColor
+        //        strikeThroughLayer.backgroundColor = UIColor.white.cgColor
         strikeThroughLayer.isHidden = true
         strikeThrough = false
         
@@ -45,6 +45,11 @@ class StrikeThroughText: UILabel {
     func resizeStrikeThrough() {
         let textSize = text!.size(attributes: [NSFontAttributeName:font])
         strikeThroughLayer.frame = CGRect(x: 0, y: bounds.size.height/2,
-            width: textSize.width, height: kStrikeOutThickness)
+                                          width: textSize.width, height: kStrikeOutThickness)
     }
+
+    
+    
+    
+
 }
