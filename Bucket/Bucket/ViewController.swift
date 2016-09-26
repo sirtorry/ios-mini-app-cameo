@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = UITableViewCell()
-        print(indexPath.row)
+        cell.selectionStyle = .none
         cell.textLabel?.text = listItems[indexPath.row]
         return cell
     }
@@ -44,14 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guest.mickey = sender as! String
     }
     
+    
 
+    
 
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            listItems.remove(at: indexPath.row)
-//           tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
+    
+    
+    
+
+    
 }
 

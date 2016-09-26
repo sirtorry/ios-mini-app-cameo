@@ -23,6 +23,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iFN-rK-h6x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JVS-gh-Kdw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iFN-rK-h6x" secondAttribute="bottom" id="iXL-wk-3qJ"/>
