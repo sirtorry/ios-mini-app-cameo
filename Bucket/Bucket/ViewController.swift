@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
-        // "Get the First Ticket at Bodo's", "Streak the Lawn", "Wear a bow-tie to a home football game"
         
         if listItems.count > 0 {
             return
@@ -45,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.selectionStyle = .none
         let item = listItems[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = item.text
+//        cell.textLabel?.text = item.text
         cell.delegate = self
         cell.toDoItem = item
         return cell
@@ -75,24 +74,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     internal func toDoItemDeleted(_ todoItem: ListItem) {
-        // could use this to get index when Swift Array indexOfObject works
-        // let index = toDoItems.indexOfObject(toDoItem)
-        // in the meantime, scan the array to find index of item to delete
-        var index = 0
-        for i in 0..<listItems.count {
-            if listItems[i] === todoItem {  // note: === not ==
-                index = i
-                break
-            }
-        }
-        // could removeAtIndex in the loop but keep it here for when indexOfObject works
-        listItems.remove(at: index)
-        
-        // use the UITableView to animate the removal of this row
-        tableView.beginUpdates()
-        let indexPathForRow = IndexPath(row: index, section: 0)
-        tableView.deleteRows(at: [indexPathForRow], with: .fade)
-        tableView.endUpdates()
+//        // could use this to get index when Swift Array indexOfObject works
+//        // let index = toDoItems.indexOfObject(toDoItem)
+//        // in the meantime, scan the array to find index of item to delete
+//        var index = 0
+//        for i in 0..<listItems.count {
+//            if listItems[i] === todoItem {  // note: === not ==
+//                index = i
+//                break
+//            }
+//        }
+//        // could removeAtIndex in the loop but keep it here for when indexOfObject works
+//        listItems.remove(at: index)
+//        
+//        // use the UITableView to animate the removal of this row
+//        tableView.beginUpdates()
+//        let indexPathForRow = IndexPath(row: index, section: 0)
+//        tableView.deleteRows(at: [indexPathForRow], with: .fade)
+//        tableView.endUpdates()
     }
     
     

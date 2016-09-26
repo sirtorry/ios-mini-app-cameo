@@ -43,7 +43,7 @@ class TableViewCell: UITableViewCell {
         label = StrikeThroughText(frame: CGRect.null)
         //label.textColor = UIColor.white
         //label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.backgroundColor = UIColor.clear
+        //label.backgroundColor = UIColor.clear
         
         // utility method for creating the contextual cues
         func createCueLabel() -> UILabel {
@@ -87,7 +87,7 @@ class TableViewCell: UITableViewCell {
         layer.insertSublayer(itemCompleteLayer, at: 0)
         
         // add a pan recognizer
-        var recognizer = UIPanGestureRecognizer(target: self, action: #selector(TableViewCell.handlePan(_:)))
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(TableViewCell.handlePan(_:)))
         recognizer.delegate = self
         addGestureRecognizer(recognizer)
     }
