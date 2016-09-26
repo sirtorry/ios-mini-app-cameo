@@ -138,7 +138,7 @@ class TableViewCell: UITableViewCell {
                     if toDoItem != nil {
                         toDoItem!.completed = false
                     }
-                    label.strikeThrough = false
+                    //label.strikeThrough = false
                     itemCompleteLayer.isHidden = true
                     UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
                 }
@@ -146,7 +146,7 @@ class TableViewCell: UITableViewCell {
                 if toDoItem != nil {
                     toDoItem!.completed = true
                 }
-                label.strikeThrough = true
+                //label.strikeThrough = true
                 itemCompleteLayer.isHidden = false
                 UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
             } else {

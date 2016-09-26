@@ -48,16 +48,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.delegate = self
         cell.toDoItem = item
         return cell
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-//        //            cell.textLabel?.backgroundColor = UIColor.clearColor()
-//        
-//        cell.selectionStyle = .none
-//        let item = listItems[(indexPath as NSIndexPath).row]
-//        cell.textLabel?.text = item.text
-//        cell.delegate = self
-//        cell.toDoItem = item
-//        return cell
     }
     
     

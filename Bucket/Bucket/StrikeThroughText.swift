@@ -28,7 +28,7 @@ class StrikeThroughText: UILabel {
     
     override init(frame: CGRect) {
         strikeThroughLayer = CALayer()
-        //        strikeThroughLayer.backgroundColor = UIColor.white.cgColor
+        //strikeThroughLayer.backgroundColor = UIColor.black.cgColor
         strikeThroughLayer.isHidden = true
         strikeThrough = false
         
