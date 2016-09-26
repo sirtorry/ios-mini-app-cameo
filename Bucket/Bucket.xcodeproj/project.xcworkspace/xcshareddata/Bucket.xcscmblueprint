@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3E89B1D52CACD99990B19EC699E437B9F255AC94",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3E89B1D52CACD99990B19EC699E437B9F255AC94" : 9223372036854775807,
+    "4C9456B4622CC201E2A71D1994B760EBF9E69574" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "620B7E33-AD88-4927-8734-4F22594F0F95",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3E89B1D52CACD99990B19EC699E437B9F255AC94" : "cameo\/",
+    "4C9456B4622CC201E2A71D1994B760EBF9E69574" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Bucket",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Bucket\/Bucket.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/UVaCS4720\/ios-mini-app-cameo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3E89B1D52CACD99990B19EC699E437B9F255AC94"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Panderson14\/PHYS2660.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4C9456B4622CC201E2A71D1994B760EBF9E69574"
+    }
+  ]
+}
