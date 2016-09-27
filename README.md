@@ -1,43 +1,51 @@
 # ios-mini-app-cameo
 
 
-Milestone Submission - Due: Monday, September 26 @ 11:55 PM
+Final Build - Due: Wednesday, October 5 @ 11:55 PM
 
 
-2 pts: App can launch properly
+5 pts: App shows list of at least 3 real items at startup
 
-6 pts: A list appears with at least 3 items in it
+10 pts: Items can be checked off by swiping left to right
 
-8 pts: You can swipe to check off an item / undo a check off
+10 pts: Items can be set back to not checked off by swiping right to left
 
-4 pts: Doesn’t crash / looks reasonable
+10 pts: UI design for showing status of item is good / easy to understand / looks nice
+
+10 pts: Tapping on a list item takes you to an "Edit Item Info" page that has the info of that item populated
+
+15 pts: Info can be edited on Edit Item Info page and is reflected back in the list
+
+10 pts: Plus button takes you to an "Add New Item" page
+
+15 pts: A new item can be added effectively on the Add New Item page and appears at the end of the list
+
+10 pts: Design / Style / Appearance / Usability
+
+5 pts: Documentation / Report
 
 
 # Tasks for Patrick (to be partially delegated to Torry when he is up to date):
 
+Add a plus button that takes you to a new page
 
-Create the list UI in Main.storyboard
+Create the UI for the new page
 
-Create a list table with the proper design for list elements
+Ensure that when the user saves the information, it will appear at the end of the list
 
-Ensure that it looks correct, and that rotating it does not cause it to look any less ideal
+Create more fields for each item in the bucket list
 
-Connect the UI to ViewController.swift
+Reflect these new fields in the UI of the "Edit Item Info" page
 
-Program the swiping attributes in the table cell class that should have been created when adding the table cell to the UI
+Make these fields editable on the page
+
+Ensure that these fields are updated and reflected in the list
+
 
 
 # Tasks for Torry:
 
-Find a way to use Xcode, either on your computer or in the lab.
 
-Learn briefly how to use Xcode. Here is a helpful tutorial: https://www.lynda.com/Swift-tutorials/iOS-8-App-Development-Swift-1-Essential-Training/185036-2.html
-
-Pull the code from the repository. Review the current code to understand everything written so far.
-
-Add an App icon from http://www.appicon.build/ to our project.
-
-Let Patrick know when you have done all of this so he can assign you more tasks.
 
 At the end: Test the app on the iPod while reviewing the rubric to ensure everything works as expected.
 
