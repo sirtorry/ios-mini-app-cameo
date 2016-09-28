@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         listItems.append(ListItem(text: "Get the First Ticket at Bodo's"))
         listItems.append(ListItem(text: "Streak the Lawn"))
-        listItems.append(ListItem(text: "Wear a bow-tie to a home football game"))
+        listItems.append(ListItem(text: "Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text "))
     }
     
     
