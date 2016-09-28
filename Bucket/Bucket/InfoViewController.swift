@@ -13,17 +13,20 @@ class InfoViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var completedSwitch: UISwitch!
+    @IBOutlet weak var infoTextView: UITextView!
 
     
     //@IBOutlet weak var nameLabel: UITextField!
     
     var mickey = "Donald"
     var hulk = false
+    var yoDude = "Well Hello there!"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = mickey
         completedSwitch.isOn = hulk
+        infoTextView.text = yoDude
         
         // Do any additional setup after loading the view.
     }

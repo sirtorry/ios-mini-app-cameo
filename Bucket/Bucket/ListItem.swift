@@ -18,6 +18,6 @@ class ListItem: NSObject {
     init(text: String) {
         self.text = text
         self.completed = false
-        self.info = ""
+        self.info = "Hey there"
     }
 }

@@ -107,14 +107,22 @@
                             <constraint firstItem="f54-yc-IhL" firstAttribute="top" secondItem="sEk-Eq-pvF" secondAttribute="bottom" constant="60" id="pKN-HN-KfD"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Edit Item Info" id="0JZ-Xr-gQl">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7tV-Hc-oG1"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="completedSwitch" destination="guJ-JE-iei" id="lYj-8H-oAA"/>
+                        <outlet property="infoTextView" destination="zg7-V7-CAj" id="CRR-kf-xpN"/>
                         <outlet property="nameLabel" destination="Jly-3Y-iaE" id="ynC-LR-jcB"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SaveStateSegue" id="BL2-14-cdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1My-zv-y1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="-82.3088455772114"/>
+            <point key="canvasLocation" x="2278" y="-68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kyu-rt-cWy">
@@ -135,4 +143,7 @@
             <point key="canvasLocation" x="-610.39999999999998" y="56.221889055472268"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BL2-14-cdy"/>
+    </inferredMetricsTieBreakers>
 </document>
