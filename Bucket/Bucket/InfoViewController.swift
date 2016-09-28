@@ -14,6 +14,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
 
     
+    //@IBOutlet weak var nameLabel: UITextField!
+    
     var mickey = "Donald"
     
     override func viewDidLoad() {

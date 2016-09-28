@@ -11,11 +11,13 @@ import UIKit
 class ListItem: NSObject {
 
     var text: String
+    var info: String
     var completed: Bool
     
     // Returns a ToDoItem initialized with the given text and default completed value.
     init(text: String) {
         self.text = text
         self.completed = false
+        self.info = ""
     }
 }
