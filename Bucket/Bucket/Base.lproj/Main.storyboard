@@ -110,7 +110,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit Item Info" id="0JZ-Xr-gQl">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7tV-Hc-oG1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7tV-Hc-oG1">
+                            <connections>
+                                <action selector="doneButton:" destination="o4t-JS-d6x" id="WZJ-UW-4Ew"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

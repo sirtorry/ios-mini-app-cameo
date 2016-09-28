@@ -10,6 +10,9 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBAction func doneButton(_ sender: AnyObject) {
+        
+    }
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var completedSwitch: UISwitch!
