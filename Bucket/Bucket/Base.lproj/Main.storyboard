@@ -108,6 +108,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="completedSwitch" destination="guJ-JE-iei" id="lYj-8H-oAA"/>
                         <outlet property="nameLabel" destination="Jly-3Y-iaE" id="ynC-LR-jcB"/>
                     </connections>
                 </viewController>

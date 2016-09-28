@@ -52,12 +52,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "InfoSegue", sender: listItems[indexPath.row].text)
+        performSegue(withIdentifier: "InfoSegue", sender: listItems[indexPath.row])
+        //performSegue(withIdentifier: "InfoSegue", sender: listItems[indexPath.row].completed)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //type(of: sender)
         let guest = segue.destination as! InfoViewController
-        guest.mickey = sender as! String
+        
+        var l = ListItem(text: "Hi")
+        l = sender as! ListItem
+        
+        //guest.mickey = sender as! String
+        guest.hulk = l.completed
+        guest.mickey = l.text
     }
     
     
