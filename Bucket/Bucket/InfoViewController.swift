@@ -21,9 +21,9 @@ class InfoViewController: UIViewController {
     
     //@IBOutlet weak var nameLabel: UITextField!
     
-    var mickey = "Donald"
-    var hulk = false
-    var yoDude = "Well Hello there!"
+    var mickey = "Donald" //Title
+    var hulk = false //Completed
+    var yoDude = "Well Hello there!" //Description
     
     override func viewDidLoad() {
         super.viewDidLoad()
