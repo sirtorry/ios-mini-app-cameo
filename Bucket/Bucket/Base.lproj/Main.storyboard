@@ -34,7 +34,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bucket List" id="ntR-Sf-Egs">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Dln-rW-xau"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fLn-QX-cm9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fLn-QX-cm9">
+                            <connections>
+                                <action selector="addItem:" destination="BYZ-38-t0r" id="Rn0-4I-yXK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="iFN-rK-h6x" id="R8B-hP-uqH"/>
