@@ -14,6 +14,7 @@ class InfoViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var completedSwitch: UISwitch!
     @IBOutlet weak var infoTextView: UITextView!
@@ -24,6 +25,14 @@ class InfoViewController: UIViewController {
     var mickey = "Donald" //Title
     var hulk = false //Completed
     var yoDude = "Well Hello there!" //Description
+    var listItem: ListItem = ListItem(text: "")
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var name = self.nameLabel.text
+        if (name!.characters.count > 0) {
+            self.listItem = ListItem(text: name!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

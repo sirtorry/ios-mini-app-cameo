@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
     @IBAction func addItem(_ sender: AnyObject) {
-        
+        performSegue(withIdentifier: "add", sender:sender)
     }
 
 
@@ -60,17 +60,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let guest = segue.destination as! InfoViewController
+        if segue.identifier == "add" {
+            let guest = segue.destination as! InfoViewController
+        }
+        else {
+            let guest = segue.destination as! InfoViewController
+            var l = ListItem(text: "Hi")
+            l = sender as! ListItem
+            guest.hulk = l.completed
+            guest.mickey = l.text
+            guest.yoDude = l.info
+        }
         
-        var l = ListItem(text: "Hi")
-        l = sender as! ListItem
-        
-        guest.hulk = l.completed
-        guest.mickey = l.text
-        guest.yoDude = l.info
     }
     
-    
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        print("Unwinding")
+    }
 
     
     internal func toDoItemDeleted(_ todoItem: ListItem) {
@@ -94,7 +100,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        tableView.endUpdates()
     }
     
-    
+    @IBAction func unwindAndAddToList(segue: UIStoryboardSegue) {
+        //to-do: change so that it edits instead of adding new
+        let source = segue.source as! InfoViewController
+        let listItem:ListItem = source.listItem
+        
+        if listItem.text != "" {
+            self.listItems.append(listItem)
+            self.tableView.reloadData()        }
+    }
     
 
     

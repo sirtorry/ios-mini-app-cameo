@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NR9-rg-dk5">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NR9-rg-dk5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -48,6 +48,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.8" y="54.422788605697157"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="Cia-ME-MGV">
+            <objects>
+                <viewController id="p2Y-RT-qqf" userLabel="Add Item" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdX-vU-Q2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="oFi-aM-FHP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yby-Ku-Edy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VOX-Qd-eKV">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNF-jv-f78">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bucket List Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-2N-Po9">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-Zl-wne">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="50" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xo9-4H-q7t">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-o6-dMx">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7D-wA-Uzx">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CFO-NV-gpU"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iEF-o6-dMx" secondAttribute="trailing" id="Fjv-Op-ca0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xo9-4H-q7t" secondAttribute="trailing" id="H5v-5a-kmJ"/>
+                                    <constraint firstItem="iEF-o6-dMx" firstAttribute="leading" secondItem="VOX-Qd-eKV" secondAttribute="leading" id="TWj-nb-NOG"/>
+                                    <constraint firstAttribute="trailing" secondItem="G4i-2N-Po9" secondAttribute="trailing" id="WK2-e0-c2r"/>
+                                    <constraint firstItem="G4i-2N-Po9" firstAttribute="leading" secondItem="VOX-Qd-eKV" secondAttribute="leading" id="ulQ-b6-W2y"/>
+                                    <constraint firstItem="Xo9-4H-q7t" firstAttribute="leading" secondItem="VOX-Qd-eKV" secondAttribute="leading" id="yTR-fs-pVx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VOX-Qd-eKV" firstAttribute="leading" secondItem="yby-Ku-Edy" secondAttribute="leadingMargin" id="etB-2o-Mgi"/>
+                            <constraint firstItem="VOX-Qd-eKV" firstAttribute="centerY" secondItem="yby-Ku-Edy" secondAttribute="centerY" id="ulx-hO-F3H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Item Info" id="oHe-bB-WQm">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="Rdt-pV-L6S"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ljf-0d-DSl">
+                            <connections>
+                                <action selector="doneButton:" destination="o4t-JS-d6x" id="Gnw-gX-huF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLz-Bg-Lbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="826"/>
         </scene>
         <!--Edit Item Info-->
         <scene sceneID="f6c-ij-JZz">
@@ -107,28 +181,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="f54-yc-IhL" firstAttribute="trailing" secondItem="In0-5O-fuY" secondAttribute="trailingMargin" id="0hs-c4-nUD"/>
+                            <constraint firstItem="f54-yc-IhL" firstAttribute="top" secondItem="sEk-Eq-pvF" secondAttribute="bottom" constant="60" id="OaS-qz-lOV"/>
                             <constraint firstItem="f54-yc-IhL" firstAttribute="leading" secondItem="In0-5O-fuY" secondAttribute="leadingMargin" id="bcp-Ob-dKN"/>
-                            <constraint firstItem="f54-yc-IhL" firstAttribute="top" secondItem="sEk-Eq-pvF" secondAttribute="bottom" constant="60" id="pKN-HN-KfD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit Item Info" id="0JZ-Xr-gQl">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF">
+                            <connections>
+                                <segue destination="MMV-Z8-Awh" kind="unwind" unwindAction="unwindToListWithSegue:" id="TP4-aN-wSj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7tV-Hc-oG1">
                             <connections>
                                 <action selector="doneButton:" destination="o4t-JS-d6x" id="WZJ-UW-4Ew"/>
+                                <segue destination="MMV-Z8-Awh" kind="unwind" unwindAction="unwindAndAddToListWithSegue:" id="EZZ-GW-uki"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="completedSwitch" destination="guJ-JE-iei" id="lYj-8H-oAA"/>
+                        <outlet property="doneButton" destination="7tV-Hc-oG1" id="BoW-tb-sqG"/>
                         <outlet property="infoTextView" destination="zg7-V7-CAj" id="CRR-kf-xpN"/>
                         <outlet property="nameLabel" destination="Jly-3Y-iaE" id="ynC-LR-jcB"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SaveStateSegue" id="BL2-14-cdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1My-zv-y1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MMV-Z8-Awh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2278" y="-68"/>
         </scene>
