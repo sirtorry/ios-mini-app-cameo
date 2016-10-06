@@ -52,7 +52,7 @@
         <!--Add Item-->
         <scene sceneID="Cia-ME-MGV">
             <objects>
-                <viewController id="p2Y-RT-qqf" userLabel="Add Item" sceneMemberID="viewController">
+                <viewController id="p2Y-RT-qqf" userLabel="Add Item" customClass="AddItemViewController" customModule="Bucket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gdX-vU-Q2y"/>
                         <viewControllerLayoutGuide type="bottom" id="oFi-aM-FHP"/>
