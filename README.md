@@ -27,9 +27,11 @@ Final Build - Due: Wednesday, October 5 @ 11:55 PM
 
 # Tasks for Patrick (to be partially delegated to Torry when he is up to date):
 
-Add a plus button that takes you to a new page
+Add a plus button that takes you to a new page **(link in main storyboard then edit prepare in viewcontroller)**
 
-Create the UI for the new page
+**Create the UI for the new page**
+
+**look at how edit is configured, make add the same as edit (cancel & done links to exit)**
 
 Ensure that when the user saves the information, it will appear at the end of the list
 
