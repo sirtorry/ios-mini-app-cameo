@@ -11,14 +11,16 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate {
 
 
+
     @IBAction func addItem(_ sender: AnyObject) {
-        
+        performSegue(withIdentifier: "add", sender:sender)
     }
 
 
     @IBOutlet weak var tableView: UITableView!
     
     var listItems = [ListItem]()
+    var indexy = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if listItems.count > 0 {
             return
         }
-        listItems.append(ListItem(text: "Get the First Ticket at Bodo's"))
-        listItems.append(ListItem(text: "Streak the Lawn"))
-        listItems.append(ListItem(text: "Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text Long String of Text "))
+        listItems.append(ListItem(text: "Get the First Ticket at Bodo's", completed: false, info: ""))
+        listItems.append(ListItem(text: "Streak the Lawn", completed: false, info: ""))
+        listItems.append(ListItem(text: "Do something else", completed: false, info: ""))
     }
     
     
@@ -55,22 +57,43 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print(indexPath.row)
+        indexy = indexPath.row
         performSegue(withIdentifier: "InfoSegue", sender: listItems[indexPath.row])
+        //print(indexPath.row)
+        //indexy = indexPath.row
         //performSegue(withIdentifier: "SaveStateSegue", sender: InfoViewController.self) do this in info controller
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let guest = segue.destination as! InfoViewController
+        if segue.identifier == "add" {
+            _ = segue.destination as! AddItemViewController
+        }
+        else {
+            let guest = segue.destination as! InfoViewController
+            var l = ListItem(text: "Hi", completed: false, info: "")
+            
+            l = sender as! ListItem
+            guest.hulk = l.completed
+            guest.mickey = l.text
+            guest.yoDude = l.info
+            //print(indexy)
+            guest.iHateYou = indexy
+        }
         
-        var l = ListItem(text: "Hi")
-        l = sender as! ListItem
-        
-        guest.hulk = l.completed
-        guest.mickey = l.text
-        guest.yoDude = l.info
     }
     
-    
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        let source = segue.source as! InfoViewController
+        //print(source.iHateYou)
+        let listItem:ListItem = source.listItem
+        //let listItems[source.iHateYou] = source.listItem
+        
+        
+        if listItem.text != "" {
+            listItems[source.iHateYou] = listItem
+            self.tableView.reloadData()        }
+    }
 
     
     internal func toDoItemDeleted(_ todoItem: ListItem) {
@@ -94,7 +117,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        tableView.endUpdates()
     }
     
-    
+    @IBAction func unwindAndAddToList(segue: UIStoryboardSegue) {
+        //to-do: change so that it edits instead of adding new
+        let source = segue.source as! AddItemViewController
+        let listItem:ListItem = source.listItem
+        
+        if listItem.text != "" {
+            self.listItems.append(listItem)
+            self.tableView.reloadData()        }
+    }
     
 
     

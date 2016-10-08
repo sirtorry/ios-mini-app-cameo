@@ -36,7 +36,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Dln-rW-xau"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fLn-QX-cm9">
                             <connections>
-                                <action selector="addItem:" destination="BYZ-38-t0r" id="Rn0-4I-yXK"/>
+                                <segue destination="Gn8-eZ-jCr" kind="show" identifier="add" id="9Q0-jq-v1O"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -78,11 +78,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="50" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zg7-V7-CAj">
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-KH-kVX">
+                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zua-Kc-0mC">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNE-iY-tQf">
@@ -95,11 +95,11 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IPb-KH-kVX" secondAttribute="trailing" id="11h-yZ-jmD"/>
                                     <constraint firstAttribute="trailing" secondItem="zua-Kc-0mC" secondAttribute="trailing" id="CiW-ad-Tcj"/>
-                                    <constraint firstAttribute="trailing" secondItem="zg7-V7-CAj" secondAttribute="trailing" id="Cm3-wn-AQ2"/>
-                                    <constraint firstItem="zg7-V7-CAj" firstAttribute="leading" secondItem="f54-yc-IhL" secondAttribute="leading" id="EqO-Lk-Yn2"/>
                                     <constraint firstItem="zua-Kc-0mC" firstAttribute="leading" secondItem="f54-yc-IhL" secondAttribute="leading" id="QPe-l8-lBZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Jly-3Y-iaE" secondAttribute="trailing" id="cjM-og-pLD"/>
+                                    <constraint firstItem="IPb-KH-kVX" firstAttribute="leading" secondItem="f54-yc-IhL" secondAttribute="leading" id="mDh-ju-PZW"/>
                                     <constraint firstItem="Jly-3Y-iaE" firstAttribute="leading" secondItem="f54-yc-IhL" secondAttribute="leading" id="nmT-LG-nAb"/>
                                 </constraints>
                             </stackView>
@@ -107,28 +107,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="f54-yc-IhL" firstAttribute="trailing" secondItem="In0-5O-fuY" secondAttribute="trailingMargin" id="0hs-c4-nUD"/>
+                            <constraint firstItem="f54-yc-IhL" firstAttribute="top" secondItem="sEk-Eq-pvF" secondAttribute="bottom" constant="60" id="OaS-qz-lOV"/>
                             <constraint firstItem="f54-yc-IhL" firstAttribute="leading" secondItem="In0-5O-fuY" secondAttribute="leadingMargin" id="bcp-Ob-dKN"/>
-                            <constraint firstItem="f54-yc-IhL" firstAttribute="top" secondItem="sEk-Eq-pvF" secondAttribute="bottom" constant="60" id="pKN-HN-KfD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit Item Info" id="0JZ-Xr-gQl">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="2K8-0k-fZF">
+                            <connections>
+                                <segue destination="MMV-Z8-Awh" kind="unwind" unwindAction="unwindToListWithSegue:" id="TP4-aN-wSj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7tV-Hc-oG1">
                             <connections>
                                 <action selector="doneButton:" destination="o4t-JS-d6x" id="WZJ-UW-4Ew"/>
+                                <segue destination="MMV-Z8-Awh" kind="unwind" unwindAction="unwindToListWithSegue:" id="B2b-5a-pIi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="completedSwitch" destination="guJ-JE-iei" id="lYj-8H-oAA"/>
-                        <outlet property="infoTextView" destination="zg7-V7-CAj" id="CRR-kf-xpN"/>
+                        <outlet property="doneButton" destination="7tV-Hc-oG1" id="BoW-tb-sqG"/>
+                        <outlet property="infoTextView" destination="IPb-KH-kVX" id="JBd-ba-Cis"/>
                         <outlet property="nameLabel" destination="Jly-3Y-iaE" id="ynC-LR-jcB"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SaveStateSegue" id="BL2-14-cdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1My-zv-y1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MMV-Z8-Awh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2278" y="-68"/>
         </scene>
@@ -149,6 +156,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R51-Zc-2sm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610.39999999999998" y="56.221889055472268"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="ZgY-JF-bsc">
+            <objects>
+                <viewController title="Edit Item Info" id="Gn8-eZ-jCr" userLabel="Add Item" customClass="AddItemViewController" customModule="Bucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19B-LJ-kcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4vF-Et-Jw6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Zy-tj-1aZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TgN-cs-dTO">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-yr-3Ms">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bucket List Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66S-Q4-Ydc">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-0T-BHw">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-w6-zSp">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-c2-CvD">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxO-Pq-dJA">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-oK-PAh"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="66S-Q4-Ydc" secondAttribute="trailing" id="7lH-XY-XAP"/>
+                                    <constraint firstAttribute="trailing" secondItem="CcO-c2-CvD" secondAttribute="trailing" id="cHD-l5-myx"/>
+                                    <constraint firstItem="CcO-c2-CvD" firstAttribute="leading" secondItem="TgN-cs-dTO" secondAttribute="leading" id="dnS-6a-99f"/>
+                                    <constraint firstItem="6iT-w6-zSp" firstAttribute="leading" secondItem="TgN-cs-dTO" secondAttribute="leading" id="hv7-MI-37s"/>
+                                    <constraint firstItem="66S-Q4-Ydc" firstAttribute="leading" secondItem="TgN-cs-dTO" secondAttribute="leading" id="oSa-tN-Ulh"/>
+                                    <constraint firstAttribute="trailing" secondItem="6iT-w6-zSp" secondAttribute="trailing" id="xQb-sj-W18"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TgN-cs-dTO" firstAttribute="trailing" secondItem="3Zy-tj-1aZ" secondAttribute="trailingMargin" id="Jzv-14-YqH"/>
+                            <constraint firstItem="TgN-cs-dTO" firstAttribute="top" secondItem="19B-LJ-kcO" secondAttribute="bottom" constant="60" id="UYy-vt-MMg"/>
+                            <constraint firstItem="TgN-cs-dTO" firstAttribute="leading" secondItem="3Zy-tj-1aZ" secondAttribute="leadingMargin" id="cek-bZ-ou4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Item" id="C65-6C-5ky">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="9jq-uu-AsG">
+                            <connections>
+                                <segue destination="K7n-gK-fAn" kind="unwind" unwindAction="unwindToListWithSegue:" id="yrt-uc-55M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="EBZ-XL-ZwX">
+                            <connections>
+                                <action selector="done:" destination="Gn8-eZ-jCr" id="Z0M-GA-vvg"/>
+                                <segue destination="K7n-gK-fAn" kind="unwind" unwindAction="unwindAndAddToListWithSegue:" id="U9Q-Cd-p3M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="complete" destination="Cmd-oK-PAh" id="bsL-nV-q74"/>
+                        <outlet property="descr" destination="6iT-w6-zSp" id="kKt-Kv-TYH"/>
+                        <outlet property="name" destination="66S-Q4-Ydc" id="2mo-D8-6fz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKS-64-QR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="K7n-gK-fAn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="749"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

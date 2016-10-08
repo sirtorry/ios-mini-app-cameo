@@ -15,9 +15,9 @@ class ListItem: NSObject {
     var completed: Bool
     
     // Returns a ToDoItem initialized with the given text and default completed value.
-    init(text: String) {
+    init(text: String, completed: Bool, info: String) {
         self.text = text
-        self.completed = false
-        self.info = "Hey there"
+        self.completed = completed
+        self.info = info
     }
 }
